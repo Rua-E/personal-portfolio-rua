@@ -2,6 +2,7 @@ import './App.css'
 import React, { useEffect } from "react"
 
 import Header from "./components/Header"
+import MouseFollower from './components/MouseFollower'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
    <main>
+      <MouseFollower />
       <Header/>
    </main>
   )

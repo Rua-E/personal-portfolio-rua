@@ -94,7 +94,7 @@ export default function Header() {
         </h3>
       </motion.div>
 
-{/* SECOND ELEMENT */}
+{/* SECOND ELEMENT - Intro/Location/Time/Date */}
       <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 4 }} className="header--bottom">
         <div>
           <h3>
@@ -105,7 +105,7 @@ export default function Header() {
           </h3>
           <p className="theme--detail">
             <ScrambleText shuffle delay={4}>
-              HI!!! I’m David, I tackle complex engineering challenges daily, alongside a team of elite software engineers. My mission is to continuously advance in web development, using my growing expertise to drive societal progress through technology.
+              WELCOME ALL!!! I’m Rua, I relish in the challenge of creating beautiful, responsive, user-friendly interfaces. My goal is to always use clean-code as I continue to navigate and aspire to master the ever growing complex frameworks in the world of web development. After a very successful 10-year career as a Diagnostic Medical Sonographer, and in the course of doing my Associated Degree in Cybersecurity I stumbled upon the fascinating field of software development. Finally, something that captivates me and COMMANDS my attention. Everything about software development fits so perfectly with my many of my skills and ignites a passion in my I have been looking for my whole professional life! Cheers to discovering our callings!  
             </ScrambleText>
           </p>
         </div>
@@ -140,7 +140,7 @@ export default function Header() {
 
 {/* SIXTH ELEMENT */}
     <h1 className="header--name">
-        <TextWriting controls={controls} text={"David Bragg"} noblink />
+        <TextWriting controls={controls} text={"Rua El-kasheef"} noblink />
         <br />
         <TextWriting controls={controls} delay={1.65} text={"Frontend"} noblink />{" "}
         <motion.div initial="hidden" animate={controls} variants={nameVariants} className="header--name--sec">

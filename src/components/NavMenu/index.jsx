@@ -1,7 +1,7 @@
-// import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import "./style.css"
 import ScrambleText from "../ScrambleText"
-// import BackgroundLines from "./../BackgroundLines/index"
+import BackgroundLines from "./../BackgroundLines/index"
 
 export default function NavMenu({ isVisible, toggleFunc }) {
   const translateVariants = {

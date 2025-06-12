@@ -1,7 +1,7 @@
-import { useRef, useState, useEffect } from "react"
-// import { motion, useAnimation } from "framer-motion"
+import React, { useRef, useState, useEffect } from "react"
+import { motion, useAnimation } from "framer-motion"
 import "./style.css"
-// import { useInView } from "react-intersection-observer"
+import { useInView } from "react-intersection-observer"
 
 const CHARS = "okjbfdsmERTYUSakscbja"
 

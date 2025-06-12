@@ -1,14 +1,23 @@
 import './App.css'
+import React, { useEffect } from "react"
+
 import Header from "./components/Header"
 
+
 function App() {
-  const [count, setCount] = useState(0)
+  async function initLocomotiveScroll() {
+    const LocomotiveScroll = (await import("locomotive-scroll")).default
+    new LocomotiveScroll()
+  }
+
+  useEffect(() => {
+    initLocomotiveScroll()
+  }, [])
 
   return (
-   <>
-   <div>Rua El-kasheef</div>
-   <Header></Header>
-   </>
+   <main>
+      <Header/>
+   </main>
   )
 }
 

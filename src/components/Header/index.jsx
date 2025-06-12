@@ -16,6 +16,7 @@ import headerVideo from "../../assets/headerVideo.webm"
 import ArrowUpRightIcon from "../../assets/Icon/arrow-up-right.svg"
 
 
+
 export default function Header() {
   const controls = useAnimation()
   const [ref, inView] = useInView()
@@ -74,19 +75,20 @@ export default function Header() {
 
       <motion.div initial="hidden" animate={controls} variant={blurVariants} transition={{ duration: 1, delay: 0.5 }} className="header--top">
         <h3>
-          <a href="/" target={"_blank"} rel="noopener noreferrer">
+          <a href="https://github.com/Rua-E" target={"_blank"} rel="noopener noreferrer">
             <ScrambleText shuffle delay={0.5}> 
               GITHUB
             </ScrambleText>
           </a>
           <span className='header--hash'>{"//"}</span>
-          <a href="/" target={"_blank"} rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/rua-el-kasheef" target={"_blank"} rel="noopener noreferrer">
             <ScrambleText shuffle delay={1}> 
               LINKEDIN
             </ScrambleText>
           </a>
           <span className='header--hash'>{"//"}</span>
           <a href="/" target={"_blank"} rel="noopener noreferrer">
+{/* CREATE RESUME WEBSITE */}
             <ScrambleText shuffle delay={1.5}> 
               RESUME
             </ScrambleText>

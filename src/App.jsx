@@ -4,6 +4,7 @@ import React, { useEffect } from "react"
 import Header from "./components/Header"
 import MouseFollower from './components/MouseFollower'
 import About from './components/About'
+import TechStack from './components/TechStack'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <MouseFollower />
       <Header/>
       <About />
+      <TechStack />
    </main>
   )
 }

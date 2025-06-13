@@ -64,39 +64,36 @@ export default function Header() {
   
   return (
     <header ref={ref}>
-      <NavMenu isVisible={menuVisible} toggleFunc={handleMenuToggle}/>
-      <BackgroundLines/>
-      <NavMenu/>
+       <NavMenu isVisible={menuVisible} toggleFunc={handleMenuToggle} />
+      <BackgroundLines />
+      <NavMenu />
 
-{/* FIRST ELEMENT */}
-      <motion.div initial="hidden" animate="visible" variant={blurVariants} transition={{ duration: 1, delay: 0.5 }} className="header--menuBtn">
-        <Button icon={MenuIcon} onClick={{handleMenuToggle}}/>
+      <motion.div initial="hidden" animate="visible" variants={blurVariants} transition={{ duration: 1, delay: 0.5 }} className="header--menuBtn">
+        <Button icon={MenuIcon} onClick={handleMenuToggle} />
       </motion.div>
 
-      <motion.div initial="hidden" animate={controls} variant={blurVariants} transition={{ duration: 1, delay: 0.5 }} className="header--top">
+      <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 0.5 }} className="header--top">
         <h3>
           <a href="https://github.com/Rua-E" target={"_blank"} rel="noopener noreferrer">
-            <ScrambleText shuffle delay={0.5}> 
+            <ScrambleText shuffle delay={0.5}>
               GITHUB
             </ScrambleText>
           </a>
-          <span className='header--hash'>{"//"}</span>
+          <span className="header--hash">{"//"}</span>
           <a href="https://www.linkedin.com/in/rua-el-kasheef" target={"_blank"} rel="noopener noreferrer">
-            <ScrambleText shuffle delay={1}> 
+            <ScrambleText shuffle delay={1}>
               LINKEDIN
             </ScrambleText>
           </a>
-          <span className='header--hash'>{"//"}</span>
+          <span className="header--hash">{"//"}</span>
           <a href="/" target={"_blank"} rel="noopener noreferrer">
-{/* CREATE RESUME WEBSITE */}
-            <ScrambleText shuffle delay={1.5}> 
+            <ScrambleText shuffle delay={1.5}>
               RESUME
             </ScrambleText>
           </a>
         </h3>
       </motion.div>
 
-{/* SECOND ELEMENT - Intro/Location/Time/Date */}
       <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 4 }} className="header--bottom">
         <div>
           <h3>
@@ -117,14 +114,12 @@ export default function Header() {
         </h3>
       </motion.div>
 
-{/* THIRD ELEMENT */}
     <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 4.5 }} className="header--center" onAnimationComplete={() => handleComplete()}>
         <a href="#contact" className="connect--button">
           <Button label="Let’s connect" icon={ArrowUpRightIcon} />
         </a>
     </motion.div>
 
-{/* FOURTH ELEMENT */}
     <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 2.85 }} className="header--right">
         <h3>
           <span className="header--hash">{"//"}</span>{" "}
@@ -135,12 +130,10 @@ export default function Header() {
         </h3>
     </motion.div>
 
-{/* FIFTH ELEMENT */}
     <motion.div initial="hidden" animate={controls} variants={opacityVariants} transition={{ duration: 2, delay: 2.85 }} className="header--video">
         <video src={headerVideo} autoPlay loop muted></video>
     </motion.div>
 
-{/* SIXTH ELEMENT */}
     <h1 className="header--name">
         <TextWriting controls={controls} text={"Rua El-kasheef"} noblink />
         <br />
@@ -155,7 +148,6 @@ export default function Header() {
           </div>
         </motion.div>
       </h1>
-
     </header>
   )
 }

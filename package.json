@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-hook/window-size": "^3.1.1",
-    "framer-motion": "^12.17.3",
+    "framer-motion": "^12.18.1",
     "locomotive-scroll": "^5.0.0-beta.21",
     "normalize-wheel": "^1.0.1",
     "react": "^19.1.0",

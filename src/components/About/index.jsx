@@ -46,7 +46,7 @@ export default function About() {
       <div ref={ref} className="about--grid">
         <div className="about--bio">
           <h2>
-            <ParaWriting stagger={0.08} text={"I'm a highly motivated software engineer with a strong "} sec={"passion for website development"} />
+            <ParaWriting stagger={0.08} text={"Passionate and driven software engineer with a "} sec={"deep enthusiasm for web development."} />
           </h2>
         </div>
 
@@ -71,11 +71,11 @@ export default function About() {
         <motion.div initial="hidden" animate={controls} variants={positionVariant} className="about--marquee">
           <h1 draggable="false">
             <InteractiveMarquee wheelFactor={0} speed={1.3}>
-              <span>ABOUT David Bragg</span>
-              <span>ABOUT David Bragg</span>
-              <span>ABOUT David Bragg</span>
-              <span>ABOUT David Bragg</span>
-              <span>ABOUT David Bragg</span>
+              <span>ABOUT Rua El-kasheef</span>
+              <span>ABOUT Rua El-kasheef</span>
+              <span>ABOUT Rua El-kasheef</span>
+              <span>ABOUT Rua El-kasheef</span>
+              <span>ABOUT Rua El-kasheef</span>
             </InteractiveMarquee>
           </h1>
         </motion.div>

@@ -3,6 +3,7 @@ import React, { useEffect } from "react"
 
 import Header from "./components/Header"
 import MouseFollower from './components/MouseFollower'
+import About from './components/About'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
    <main>
       <MouseFollower />
       <Header/>
+      <About />
    </main>
   )
 }

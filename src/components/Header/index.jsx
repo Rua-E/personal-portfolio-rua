@@ -107,7 +107,7 @@ export default function Header() {
           </h3>
           <p className="theme--detail">
             <ScrambleText shuffle delay={4}>
-              WELCOME ALL!!! I’m Rua, I relish in the challenge of creating beautiful, responsive, user-friendly interfaces. My goal is to always use clean-code as I continue to navigate and aspire to master the ever growing complex frameworks in the world of web development. After a very successful 10-year career as a Diagnostic Medical Sonographer, and in the course of doing my Associated Degree in Cybersecurity I stumbled upon the fascinating field of software development. Finally, something that captivates me and COMMANDS my attention. Everything about software development fits so perfectly with my many of my skills and ignites a passion in my I have been looking for my whole professional life! Cheers to discovering our callings!  
+              WELCOME ALL!!! I’m Rua - from ultrasound technologist, to cybsersecurity student, to frontend developer! I’ve finally discovered the work that excites and fulfills me! My mission is to continually learn and grow to be an effective programmer. 
             </ScrambleText>
           </p>
         </div>

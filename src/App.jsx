@@ -5,6 +5,8 @@ import Header from "./components/Header"
 import MouseFollower from './components/MouseFollower'
 import About from './components/About'
 import TechStack from './components/TechStack'
+import Projects from './components/Projects'
+import Resume from './components/Resume'
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
       <Header/>
       <About />
       <TechStack />
+      <Projects />
+      <Resume />
    </main>
   )
 }

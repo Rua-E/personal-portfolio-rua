@@ -41,7 +41,7 @@ export default function TechStack() {
         </div>
 
         <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 0.5 }} className="techStackSec--head--title">
-          <h5 className="theme--text">
+          <h3 className="theme--text">
             <ScrambleText shuffle delay={0.5}>
               03
             </ScrambleText>{" "}
@@ -49,7 +49,7 @@ export default function TechStack() {
             <ScrambleText shuffle delay={0.5}>
               Expertise
             </ScrambleText>
-          </h5>
+          </h3>
         </motion.div>
 
         <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 1 }} onAnimationComplete={() => handleComplete()} className="techStackSec--head--detail">

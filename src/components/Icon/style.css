@@ -39,7 +39,7 @@
     width: 4px;
     height: 4px;
     position: absolute;
-    background-color: #959292;
+    background-color: var(--highlight);
     transition: 0.3s ease;
   }
   

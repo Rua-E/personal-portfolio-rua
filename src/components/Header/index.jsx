@@ -14,7 +14,7 @@ import TextWriting from '../TextWriting'
 import MenuIcon from "../../assets/Icon/menu.svg"
 import headerVideo from "../../assets/headerVideo.webm"
 import ArrowUpRightIcon from "../../assets/Icon/arrow-up-right.svg"
-
+import Resume from "../../assets/Resume/Rua-Resume.pdf"
 
 
 export default function Header() {
@@ -86,7 +86,7 @@ export default function Header() {
             </ScrambleText>
           </a>
           <span className="header--hash">{"//"}</span>
-          <a href="/" target={"_blank"} rel="noopener noreferrer">
+          <a href={Resume} target={"_blank"} rel="noopener noreferrer">
             <ScrambleText shuffle delay={1.5}>
               RESUME
             </ScrambleText>

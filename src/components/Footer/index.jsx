@@ -137,7 +137,7 @@ export default function Footer() {
       <div className="footer--grid">
         <div className="footer--grid--heading">
           <h2>
-            <ParaWriting stagger={0.08} text={"Get in "} sec={"touch"} />
+            <ParaWriting stagger={0.08} text={"Lets "} sec={"Connect"} />
           </h2>
         </div>
         <div className="footer--grid--form">

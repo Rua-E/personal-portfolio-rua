@@ -63,7 +63,7 @@ export default function Projects() {
 
       <div className="projects--grid">
         <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 0.5 }} className="projects--grid--title">
-          <h3 className="theme--text">
+          <h5 className="theme--text">
             <ScrambleText shuffle delay={0.5}>
               03
             </ScrambleText>{" "}
@@ -71,7 +71,7 @@ export default function Projects() {
             <ScrambleText shuffle delay={0.5}>
               Expertise
             </ScrambleText>
-          </h3>
+          </h5>
         </motion.div>
 
         <div className="projects--grid--content">

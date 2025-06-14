@@ -16,6 +16,7 @@ import Icon from "../Icon"
 import githubIcon from "../../assets/Icon/github.svg"
 import linkedinIcon from "../../assets/Icon/linkedin.svg"
 import fileIcon from "../../assets/Icon/file.svg"
+import RuaResume from "../../assets/Resume/Rua-Resume.pdf"
 
 // jsons
 import technicalSkills from "../../constants/technicalSkills.json"
@@ -63,11 +64,11 @@ export default function Resume() {
               <h2>
                 <ParaWriting stagger={0.08} text={"Rua El-kasheef"} />
               </h2>
-              <h4>
+              <h5>
                 <ScrambleText shuffle delay={0}>
                   Software Engineer
                 </ScrambleText>
-              </h4>
+              </h5>
               <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 0.5 }} onAnimationComplete={() => handleComplete()} className="resume--grid--detail--data--name--icons">
                 <a href="https://github.com/Rua-E" target="_blank" rel="noreferrer">
                   <Icon img={githubIcon} />
@@ -75,7 +76,7 @@ export default function Resume() {
                 <a href="https://www.linkedin.com/in/rua-el-kasheef" target="_blank" rel="noreferrer">
                   <Icon img={linkedinIcon} />
                 </a>
-                <a href="" target="_blank" rel="noreferrer">
+                <a href={RuaResume} target="_blank" rel="noreferrer">
                   <Icon img={fileIcon} />
                 </a>
               </motion.div>
@@ -111,7 +112,7 @@ export default function Resume() {
               <ScrambleText delay={0}>A highly motivated software engineer prepared to utilise exceptional software, problem-solving and communication skills to further my programming passion as a website developer.</ScrambleText>
             </p>
 
-            <motion.h3 initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 0.5 }} className="theme--text">
+            <motion.h5 initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 0.5 }} className="theme--text">
               <ScrambleText shuffle delay={0.5}>
                 05
               </ScrambleText>{" "}
@@ -119,7 +120,7 @@ export default function Resume() {
               <ScrambleText shuffle delay={0.5}>
                 Resume
               </ScrambleText>
-            </motion.h3>
+            </motion.h5>
           </div>
           <div className="resume--grid--experience--body">
             <h4>

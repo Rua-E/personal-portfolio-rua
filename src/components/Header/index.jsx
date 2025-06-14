@@ -14,7 +14,7 @@ import TextWriting from '../TextWriting'
 import MenuIcon from "../../assets/Icon/menu.svg"
 import headerVideo from "../../assets/headerVideo.webm"
 import ArrowUpRightIcon from "../../assets/Icon/arrow-up-right.svg"
-import Resume from "../../assets/Resume/Rua-Resume.pdf"
+import RuaResume from "../../assets/Resume/Rua-Resume.pdf"
 
 
 export default function Header() {
@@ -86,7 +86,7 @@ export default function Header() {
             </ScrambleText>
           </a>
           <span className="header--hash">{"//"}</span>
-          <a href={Resume} target={"_blank"} rel="noopener noreferrer">
+          <a href={RuaResume} target={"_blank"} rel="noopener noreferrer">
             <ScrambleText shuffle delay={1.5}>
               RESUME
             </ScrambleText>
@@ -96,12 +96,12 @@ export default function Header() {
 
       <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 4 }} className="header--bottom">
         <div>
-          <h3>
-            <ScrambleText shuffle delay={4}>
+          <h5>
+            <ScrambleText shuffle delay={4} className="highlight">
               intro
             </ScrambleText>{" "}
             <span className="header--hash">{"//"}</span>
-          </h3>
+          </h5>
           <p className="theme--detail">
             <ScrambleText shuffle delay={4}>
               WELCOME ALL!!! I’m Rua - from ultrasound technologist, to cybsersecurity student, to frontend developer! I’ve finally discovered the work that excites and fulfills me! My mission is to continually learn and grow to be an effective programmer. 

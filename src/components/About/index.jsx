@@ -51,7 +51,7 @@ export default function About() {
         </div>
 
         <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 1.5 }} className="about--title">
-          <h3 className="theme--text--dark">
+          <h5 className="theme--text--dark">
             <ScrambleText shuffle delay={1.5}>
               02
             </ScrambleText>{" "}
@@ -59,7 +59,7 @@ export default function About() {
             <ScrambleText shuffle delay={1.5}>
               about
             </ScrambleText>
-          </h3>
+          </h5>
         </motion.div>
 
         <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 2 }} onAnimationComplete={() => handleComplete()} className="about--detail">

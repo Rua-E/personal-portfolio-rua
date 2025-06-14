@@ -20,7 +20,7 @@
 }
 
 .theme--text--dark span {
-  color: var(--grayL);
+  color: var(--highlight);
 }
 
 .theme--detail--dark,

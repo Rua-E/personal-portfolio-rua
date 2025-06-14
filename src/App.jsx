@@ -1,8 +1,8 @@
 import './App.css'
 import React, { useEffect } from "react"
 
-import Header from "./components/Header"
 import MouseFollower from './components/MouseFollower'
+import Header from "./components/Header"
 import About from './components/About'
 import TechStack from './components/TechStack'
 import Projects from './components/Projects'

@@ -20,8 +20,8 @@ import RuaResume from "../../assets/Resume/Rua-Resume.pdf"
 export default function Header() {
   const controls = useAnimation()
   const [ref, inView] = useInView()
-  const [menuVisible, setMenuVisible] = useState(false)
   const [hasAnimated, setHasAnimated] = useState(false)
+  const [menuVisible, setMenuVisible] = useState(false)
   
   const handleComplete = () => {
     setHasAnimated(true)

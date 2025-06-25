@@ -33,7 +33,7 @@
     width: 8px;
     height: 8px;
     position: absolute;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--highlight);
     transition: 0.3s ease;
   }
   

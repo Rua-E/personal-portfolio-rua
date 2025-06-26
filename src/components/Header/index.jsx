@@ -15,6 +15,7 @@ import MenuIcon from "../../assets/Icon/menu.svg"
 import headerVideo from "../../assets/headerVideo.webm"
 import ArrowUpRightIcon from "../../assets/Icon/arrow-up-right.svg"
 import RuaResume from "../../assets/Resume/Rua-Resume.pdf"
+import File from "../../assets/Icon/file.svg"
 
 
 export default function Header() {
@@ -69,10 +70,7 @@ export default function Header() {
       <NavMenu />
 
       <motion.div initial="hidden" animate="visible" variants={blurVariants} transition={{ duration: 1, delay: 0.5 }} className="header--menuBtn">
-        <Button icon={MenuIcon} onClick={handleMenuToggle} />
-      </motion.div>
-
-      <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 0.5 }} className="header--top">
+        {/* <Button icon={MenuIcon} onClick={handleMenuToggle} /> */}
         <h3>
           <a href="https://github.com/Rua-E" target={"_blank"} rel="noopener noreferrer">
             <ScrambleText shuffle delay={0.5}>
@@ -88,7 +86,33 @@ export default function Header() {
           <span className="header--hash">{"//"}</span>
           <a href={RuaResume} target={"_blank"} rel="noopener noreferrer">
             <ScrambleText shuffle delay={1.5}>
+              PROJECTS
+            </ScrambleText>
+          </a>
+        </h3>
+      </motion.div>
+
+      <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 0.5 }} className="header--top">
+        <h3>
+          <a href="#tech" >
+            <ScrambleText shuffle delay={0.5}>
+              TECH
+            </ScrambleText>
+          </a>
+          <span className="header--hash">{"//"}</span>
+
+          <a href="#resume">
+            <ScrambleText shuffle delay={1}>
               RESUME
+            </ScrambleText>
+          </a>
+          <a href={RuaResume} target={"_blank"} rel="noopener noreferrer">
+            <img src={File} ></img>
+          </a>
+          <span className="header--hash">{"//"}</span>
+          <a href="#contact" >
+            <ScrambleText shuffle delay={1.5}>
+              CONTACT
             </ScrambleText>
           </a>
         </h3>

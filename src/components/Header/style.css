@@ -37,6 +37,10 @@ header .header--hash {
   margin: 0 1ch;
 }
 
+img {
+  top:-10%
+}
+
 .header--top,
 .header--video,
 .header--center,
@@ -63,7 +67,7 @@ header .header--hash {
 
 .header--top {
   right: 0%;
-  top: 0%;
+  top: -5%;
   width: fit-content;
   min-height: 60px;
   z-index: 10;
@@ -253,3 +257,4 @@ header .header--bottom p {
     align-items: center;
   }
 }
+

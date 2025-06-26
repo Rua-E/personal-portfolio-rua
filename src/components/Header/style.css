@@ -37,9 +37,6 @@ header .header--hash {
   margin: 0 1ch;
 }
 
-img {
-  top:-10%
-}
 
 .header--top,
 .header--video,
@@ -67,7 +64,7 @@ img {
 
 .header--top {
   right: 0%;
-  top: -5%;
+  top: 0%;
   width: fit-content;
   min-height: 60px;
   z-index: 10;

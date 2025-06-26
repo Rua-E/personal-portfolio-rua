@@ -7,9 +7,10 @@ import ParaWriting from "../ParaWriting"
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
-import work1 from "../../assets/Images/work1.png"
-import work2 from "../../assets/Images/work2.png"
-import work3 from "../../assets/Images/work3.png"
+
+import react_project from "../../assets/Images/React_Project.gif"
+import ultraverse from "../../assets/Images/Ultraverse.png"
+import Brainwave from "../../assets/Images/Brainwave.png"
 
 export default function Projects() {
   const controls = useAnimation()
@@ -29,25 +30,28 @@ export default function Projects() {
 
   const works = [
     {
-      client: "client name",
-      year: "2023",
-      img: work1,
-      title: "PROJECT NAME.",
+      client: "Personal Project",
+      year: "2024",
+      img: Brainwave,
+      title: "Brainwave.",
       detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      url: "https://brainwave-clone-git-main-rua-el-kasheefs-projects.vercel.app/",
     },
     {
-      client: "client name",
-      year: "2023",
-      img: work2,
-      title: "PROJECT NAME.",
+      client: "FrontEnd Simplified",
+      year: "2024",
+      img: ultraverse,
+      title: "ULTRAVERSE.",
       detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      url: "https://rua-el-kasheef-internship.vercel.app/"
     },
     {
-      client: "client name",
-      year: "2023",
-      img: work3,
-      title: "PROJECT NAME.",
+      client: "FrontEnd Simplified",
+      year: "2024",
+      img: react_project,
+      title: "REACT PROJECT.",
       detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      url: "https://react-finalproject-moviesearch-d62v.vercel.app/"
     },
   ]
 

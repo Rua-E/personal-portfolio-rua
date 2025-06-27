@@ -34,15 +34,15 @@ export default function Projects() {
       year: "2024",
       img: Brainwave,
       title: "Brainwave.",
-      detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      detail: "A vibrant website with smooth animations making for a great user interface and user experience that also attractive on mobile. Utilized React.Js and Tailwind CSS as well as a bento box layout.",
       url: "https://brainwave-clone-git-main-rua-el-kasheefs-projects.vercel.app/",
     },
     {
       client: "FrontEnd Simplified",
       year: "2024",
       img: ultraverse,
-      title: "ULTRAVERSE.",
-      detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      title: "ULTRAVERSE (internship).",
+      detail: "Converted a static single-page application built with  HTML, CSS, JavaScript and React into a dynamic, interactive and user friendly interface by integrating animations, transitions and carousels.Handled API requests utilizing Axios to fetch data and displayed it with the use of a skeleton loader pagination and dynamic routing. Effectively worked in a virtual team and collaborative  environment using Git version control and Github.",
       url: "https://rua-el-kasheef-internship.vercel.app/"
     },
     {
@@ -50,7 +50,7 @@ export default function Projects() {
       year: "2024",
       img: react_project,
       title: "REACT PROJECT.",
-      detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      detail: "A movie website that allows you to hit an API and search. Includes home, results and details pages as well as their loading states.Utilizes React.Js, CSS, HTML and JavaScript.",
       url: "https://react-finalproject-moviesearch-d62v.vercel.app/"
     },
   ]

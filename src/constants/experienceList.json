@@ -1,18 +1,22 @@
 [
   {
-    "company": "---",
+    "company": "FRONTEND SIMPLIFIED INTERNSHIP",
     "role": "Software Engineer",
     "resps": [
-      "DESCRIPTION"
+      "Converted a static single-page application built with  HTML, CSS, JavaScript and React into a dynamic, interactive and user friendly interface by integrating animations, transitions and carousels.",
+      "Handled API requests utilizing Axios to fetch data and displayed it with the use of a skeleton loader pagination and dynamic routing.",
+      "Effectively worked in a virtual team and collaborative  environment using Git version control and Github."
     ],
-    "date": "DATE"
+    "date": "October 2024 - November 2024"
   },
   {
-    "company": "---",
-    "role": "Software Engineer",
+    "company": "FRONTEND SIMPLIFIED",
+    "role": "STUDENT",
     "resps": [
-      "DESCRIPTION"
+      "Structured curriculum covering all the essential front-end technologies such as design, HTML, CSS, JavaScript and React.",
+      "Integrates the use of APIs and async JavaScript",
+      "Emphasizes building real-word application to prepare students the work force."
     ],
-    "date": "DATE"
+    "date": "December 2023 - December 2024"
   }
 ]

@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from "react"
+// 
+
+import { useState, useEffect } from "react"
 import ScrambleText from "../ScrambleText"
 
 export default function Time() {
-  // use Intl.DateTimeFormat().resolvedOptions(); to get your own timeZone too
-  const myTimeZone = "Australia/Sydney"
+  const myTimeZone = "America/New_York" // Home time (Maryland)
   const usersTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 
-  const myTimeZoneText = myTimeZone.split("/")[1]
-  const userTimeZoneText = usersTimeZone.split("/")[1]
-
-  const [myFormatttedTime, setMyFormattedTime] = useState("")
+  const [myFormattedTime, setMyFormattedTime] = useState("")
   const [userFormattedTime, setUserFormattedTime] = useState("")
+
+  // ✅ Extract readable city name from user's timezone (handles underscores like "New_York")
+  const getCityFromTimeZone = (tz) => {
+    const parts = tz.split("/")
+    return parts.length > 1 ? parts[1].replace(/_/g, " ") : tz
+  }
+
+  const userCityName = getCityFromTimeZone(usersTimeZone)
 
   const getFormattedTime = (timeZone) => {
     const options = {
@@ -24,38 +30,26 @@ export default function Time() {
 
   const updateClocks = () => {
     setMyFormattedTime(getFormattedTime(myTimeZone))
-    setUserFormattedTime(getFormattedTime(usersTimeZone.timeZone))
+    setUserFormattedTime(getFormattedTime(usersTimeZone))
   }
 
   useEffect(() => {
     updateClocks()
-  }, [])
-
-  useEffect(() => {
-    // Update every second
     const intervalId = setInterval(updateClocks, 1000)
-
-    // Cleanup the interval when the component unmounts
     return () => clearInterval(intervalId)
-
-    // Initial clock update
   }, [])
 
   return (
     <>
       <ScrambleText shuffle delay={4.2}>
-        {myTimeZoneText}
+        Maryland
       </ScrambleText>{" "}
-      {myFormatttedTime}
-      {myTimeZoneText !== userTimeZoneText && (
-        <>
-          <span className="header--hash">{"//"}</span>{" "}
-          <ScrambleText shuffle delay={4.2}>
-            {userTimeZoneText}
-          </ScrambleText>{" "}
-          {userFormattedTime}
-        </>
-      )}
+      {myFormattedTime}
+      <span className="header--hash">{" // "}</span>{" "}
+      <ScrambleText shuffle delay={4.2}>
+        {userCityName}
+      </ScrambleText>{" "}
+      {userFormattedTime}
     </>
   )
 }

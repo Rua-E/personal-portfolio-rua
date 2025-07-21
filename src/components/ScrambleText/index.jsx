@@ -5,7 +5,9 @@ import { useInView } from "react-intersection-observer"
 
 const CHARS = "okjbfdsmERTYUSakscbja"
 
+
 const ScrambleText = ({ children, delay, shuffle = false }) => {
+  
   const intervalRef = useRef(null)
   const controls = useAnimation()
   const [ref, inView] = useInView()

@@ -93,7 +93,7 @@ export default function Header() {
       </motion.div>
 
       <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 0.5 }} className="header--top">
-        <h3>
+        <h3 className="flex items-center gap-1">
           <a href="#tech" >
             <ScrambleText shuffle delay={0.5}>
               TECH
@@ -106,8 +106,8 @@ export default function Header() {
               RESUME
             </ScrambleText>
           </a>
-          <a href={RuaResume} target={"_blank"} rel="noopener noreferrer">
-            <img src={File} ></img>
+          <a href={RuaResume} target={"_blank"} rel="noopener noreferrer" className="inline-block">
+            <img src={File} alt="Resume Icon" style={{ width: '15px', height: '15px', position: 'relative', top: '4.5px', marginLeft: '4px' }} className="inline-block align-middle" ></img>
           </a>
           <span className="header--hash">{"//"}</span>
           <a href="#contact" >
@@ -133,7 +133,7 @@ export default function Header() {
           </p>
         </div>
 
-        <h3>
+        <h3 className="min-w-0">
           <Time delay={4.0} />
         </h3>
       </motion.div>

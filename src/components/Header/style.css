@@ -63,12 +63,13 @@ header .header--hash {
 }
 
 .header--top {
+  position: fixed;
+  display: flex;
   right: 0%;
   top: 0%;
   width: fit-content;
   min-height: 60px;
-  z-index: 10;
-  margin-top: 18px;
+  z-index: 55;
 }
 
 .header--bottom {
@@ -209,10 +210,6 @@ header .header--bottom p {
 
   header h3 {
     font-size: 14px;
-  }
-
-  .header--top {
-    margin-top: 10px;
   }
 }
 

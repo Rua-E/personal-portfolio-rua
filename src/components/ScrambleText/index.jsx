@@ -5,15 +5,15 @@ import { useInView } from "react-intersection-observer"
 
 const CHARS = "okjbfdsmERTYUSakscbja"
 
-
 const ScrambleText = ({ children, delay, shuffle = false }) => {
+  const rawText = typeof children === "string" ? children : typeof children === "number" ? String(children) : ""
   
   const intervalRef = useRef(null)
   const controls = useAnimation()
   const [ref, inView] = useInView()
   const CYCLES_PER_LETTER = shuffle ? 2 : 1
   const SHUFFLE_TIME = shuffle ? 50 : 0
-  const [text, setText] = useState(children)
+  const [text, setText] = useState(rawText)
   const [hasScrambled, setHasScrambled] = useState(false)
 
   const handleComplete = () => {
@@ -24,7 +24,7 @@ const ScrambleText = ({ children, delay, shuffle = false }) => {
     let pos = 0
 
     intervalRef.current = setInterval(() => {
-      const scrambled = children
+      const scrambled = rawText
         .split("")
         .map((char, index) => {
           if (pos / CYCLES_PER_LETTER > index || CHARS.includes(char) || char === " " || char === "." || char === "," || char === `'` || char === "!") {
@@ -41,7 +41,7 @@ const ScrambleText = ({ children, delay, shuffle = false }) => {
       setText(scrambled)
       pos = shuffle ? pos + 1 : pos + 4
 
-      if (pos >= children.length * CYCLES_PER_LETTER) {
+      if (pos >= rawText.length * CYCLES_PER_LETTER) {
         stopScramble()
       }
     }, SHUFFLE_TIME)
@@ -49,7 +49,7 @@ const ScrambleText = ({ children, delay, shuffle = false }) => {
 
   const stopScramble = () => {
     clearInterval(intervalRef.current)
-    setText(children)
+    setText(rawText)
     setHasScrambled(true)
   }
 
@@ -101,7 +101,7 @@ const ScrambleText = ({ children, delay, shuffle = false }) => {
 
   return (
     <motion.span className="scrambleText">
-      <span>{children}</span>
+      <span>{rawText}</span>
       <motion.span initial="hidden" animate={controls} variants={textVariants} ref={ref} className="scrambleText--overlay" onAnimationComplete={() => handleComplete()}>
         {text.split("").map((char, index) => (
           <motion.span key={index} variants={charVariants}>

@@ -46,10 +46,15 @@ export default function Time() {
       </ScrambleText>{" "}
       {myFormattedTime}
       <span className="header--hash">{" // "}</span>{" "}
+        <span 
+        // className="flex items-center whitespace-nowrap gap-1"
+        style={{ display: "inline-flex", whiteSpace: "nowrap", minWidth: "max-content", gap: "10px" }}
+        >
       <ScrambleText shuffle delay={4.2}>
         {userCityName}
       </ScrambleText>{" "}
       {userFormattedTime}
+        </span>
     </>
   )
 }

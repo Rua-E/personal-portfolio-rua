@@ -8,7 +8,7 @@ import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
 
-import react_project from "../../assets/Images/React_Project.gif"
+import SKINSTRIC from "../../assets/Images/SKINSTRIC_AL_IMAGE.png"
 import ultraverse from "../../assets/Images/Ultraverse.png"
 import Brainwave from "../../assets/Images/Brainwave.png"
 
@@ -30,6 +30,14 @@ export default function Projects() {
 
   const works = [
     {
+      client: "FrontEnd Simplified",
+      year: "2025",
+      img: SKINSTRIC,
+      title: "SKINSTRIC AI.",
+      detail: "A AI website that allows you to either capture a live selfie from your device, or download an image and analyze it using an AI algorithm.",
+      url: "https://internship-skinstric-ai-ruae.vercel.app/"
+    },
+    {
       client: "Personal Project",
       year: "2024",
       img: Brainwave,
@@ -44,14 +52,6 @@ export default function Projects() {
       title: "ULTRAVERSE (internship).",
       detail: "Converted a static single-page application built with  HTML, CSS, JavaScript and React into a dynamic, interactive and user friendly interface by integrating animations, transitions and carousels.Handled API requests utilizing Axios to fetch data and displayed it with the use of a skeleton loader pagination and dynamic routing. Effectively worked in a virtual team and collaborative  environment using Git version control and Github.",
       url: "https://rua-el-kasheef-internship.vercel.app/"
-    },
-    {
-      client: "FrontEnd Simplified",
-      year: "2024",
-      img: react_project,
-      title: "REACT PROJECT.",
-      detail: "A movie website that allows you to hit an API and search. Includes home, results and details pages as well as their loading states.Utilizes React.Js, CSS, HTML and JavaScript.",
-      url: "https://react-finalproject-moviesearch-d62v.vercel.app/"
     },
   ]
 

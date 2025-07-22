@@ -1,7 +1,15 @@
 [
   {
-    "company": "FRONTEND SIMPLIFIED INTERNSHIP",
-    "role": "Software Engineer",
+    "company": "SKINSTRIC-AI",
+    "role": "Software Engineer (INTERNSHIP)",
+    "resps": [
+      "Assigned technical requirements and carried out the specifications."
+    ],
+    "date": "October 2024 - November 2024"
+  },
+  {
+    "company": "ULTRAVERSE",
+    "role": "Software Engineer (INTERNSHIP)",
     "resps": [
       "Converted a static single-page application built with  HTML, CSS, JavaScript and React into a dynamic, interactive and user friendly interface by integrating animations, transitions and carousels.",
       "Handled API requests utilizing Axios to fetch data and displayed it with the use of a skeleton loader pagination and dynamic routing.",

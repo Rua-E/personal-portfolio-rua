@@ -16,7 +16,7 @@ import Icon from "../Icon"
 import githubIcon from "../../assets/Icon/github.svg"
 import linkedinIcon from "../../assets/Icon/linkedin.svg"
 import fileIcon from "../../assets/Icon/file.svg"
-import RuaResume from "../../assets/Resume/RESUMEJuly22.pdf"
+import RuaResume from "../../assets/Resume/RESUMEJuly 22.pdf"
 
 // jsons
 import technicalSkills from "../../constants/technicalSkills.json"

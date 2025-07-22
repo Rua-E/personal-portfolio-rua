@@ -1,8 +1,12 @@
 import "./style.css"
 
-export default function Button({ icon, label, light = false, onClick = () => {} }) {
+export default function Button({ icon, label, light = false, success = false, onClick = () => {} }) {
   return (
-    <div className={`btn ${light && "btn__light"}`} onClick={() => onClick}>
+    <div 
+    // className={`btn ${light && "btn__light"}`} onClick={onClick}
+    className={`btn ${light ? "btn__light" : ""} ${success ? "btn__success" : ""}`}
+      onClick={onClick}
+    >
       {label && <span className="btn--label">{label}</span>}
       {icon && <img className="btn--icon" src={icon} alt="icon" />}
 

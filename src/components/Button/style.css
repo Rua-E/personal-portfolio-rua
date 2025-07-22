@@ -103,3 +103,16 @@
     }
   }
   
+
+  .btn__success .btn--label {
+    color: #00c851; /* Green */
+  }
+
+  .btn__success .btn--label {
+    color: #00c851; /* green for text */
+  }
+  
+  .btn__success .btn--icon {
+    filter: invert(46%) sepia(96%) saturate(404%) hue-rotate(72deg) brightness(92%) contrast(87%);
+    /* or just use fill/color if it's an SVG, or replace with your own green icon */
+  }

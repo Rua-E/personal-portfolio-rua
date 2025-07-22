@@ -22,9 +22,9 @@ export default function Footer() {
   const [sendStatus, setSendStatus] = useState({ processed: false, message: "", variant: "success" })
   const [hasAnimated, setHasAnimated] = useState(false)
   const [fieldValues, setFieldValues] = useState({
-    name: false,
-    email: false,
-    message: false,
+    name: "",
+    email: "",
+    message: "",
   })
 
   const handleComplete = () => {
@@ -76,12 +76,19 @@ export default function Footer() {
     },
   ]
 
-  const handleInputClick = (stateKey) => {
-    setFieldValues({
-      ...fieldValues,
-      [stateKey]: true,
+  const [fieldTouched, setFieldTouched] = useState({
+    name: false,
+    email: false,
+    message: false,
+  })
+  
+  const handleInputClick = (key) => {
+    setFieldTouched({
+      ...fieldTouched,
+      [key]: true,
     })
   }
+
 
   const timeoutAlert = () =>
     setTimeout(() => {
@@ -90,23 +97,23 @@ export default function Footer() {
 
   const sendEmail = async () => {
     const requiredFields = ["name", "email", "message"]
-    const missingFields = requiredFields.filter((field) => !fieldValues[field])
+    const missingFields = requiredFields.filter((field) => !fieldValues[field]?.trim());
 
     if (missingFields.length > 0) {
-      setSendStatus({ processed: true, variant: "error", message: "Not all fields were filled" })
-      timeoutAlert()
-      return
+      setSendStatus({ processed: true, variant: "error", message: "Not all fields were filled" });
+      timeoutAlert();
+      return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(fieldValues.email)) {
-      setSendStatus({ processed: true, variant: "error", message: "Invalid email" })
-      return
+      setSendStatus({ processed: true, variant: "error", message: "Invalid email" });
+      return;
     }
 
     setIsSending(true)
     try {
-      const { serviceId, templateid, publicKey } = emailjsconfig
+      const { serviceId, templateId, publicKey } = emailjsconfig
 
       console.log("trigger")
 
@@ -116,7 +123,7 @@ export default function Footer() {
         message: fieldValues.message,
       }
 
-      const response = await emailjs.send(serviceId, templateid, templateParams, publicKey)
+      const response = await emailjs.send(serviceId, templateId, templateParams, publicKey)
 
       console.log("Email sent successfully:", response)
       setIsSending(false)
@@ -144,7 +151,33 @@ export default function Footer() {
           {inputFields.map((field, index) => (
             <motion.div key={index} initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="input--div">
               <label htmlFor={field.id}>{field.label}</label>
-              {field.type === "textarea" ? <textarea name={field.id} id={field.id} placeholder={field.placeholder} rows={field.rows} wrap={field.wrap} onClick={() => handleInputClick(field.stateKey)}></textarea> : <input type={field.type} name={field.id} id={field.id} placeholder={field.placeholder} onClick={() => handleInputClick(field.stateKey)} />}
+             
+              
+
+              {field.type === "textarea" ? (
+                  <textarea
+                    name={field.id}
+                    id={field.id}
+                    placeholder={field.placeholder}
+                    rows={field.rows}
+                    wrap={field.wrap}
+                    value={fieldValues[field.stateKey]}
+                    onChange={(e) => setFieldValues({ ...fieldValues, [field.stateKey]: e.target.value })}
+                    onClick={() => handleInputClick(field.stateKey)}
+                  />
+                ) : (
+                  <input
+                    type={field.type}
+                    name={field.id}
+                    id={field.id}
+                    placeholder={field.placeholder}
+                    value={fieldValues[field.stateKey]}
+                    onChange={(e) => setFieldValues({ ...fieldValues, [field.stateKey]: e.target.value })}
+                    onClick={() => handleInputClick(field.stateKey)}
+                  />
+                )}
+              
+  
               <motion.div
                 initial="hidden"
                 animate={controls}
@@ -171,7 +204,19 @@ export default function Footer() {
             </motion.div>
           ))}
           <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 2 }} className="footer--grid--form--btn">
-            <Button label={`${isSending ? "Sending it through" : "SEND MESSAGE"}`} icon={ArrowUpRightIcon} onClick={sendEmail} />
+            {/* <Button label={`${isSending ? "Sending it through" : "SEND MESSAGE"}`} icon={ArrowUpRightIcon} onClick={sendEmail} /> */}
+            <Button
+  label={
+    isSending
+      ? "Sending it through"
+      : sendStatus.processed && sendStatus.variant === "success"
+      ? "Message Sent"
+      : "SEND MESSAGE"
+  }
+  icon={ArrowUpRightIcon}
+  onClick={sendEmail}
+  success={sendStatus.processed && sendStatus.variant === "success"}
+/>
           </motion.div>
         </div>
       </div>

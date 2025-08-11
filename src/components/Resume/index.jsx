@@ -1,54 +1,54 @@
-import { useState, useEffect } from "react"
-import "./style.css"
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import { useState, useEffect } from "react";
+import "./style.css";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 // components
-import BackgroundLines from "../BackgroundLines"
-import ParaWriting from "../ParaWriting"
-import FadeList from "../FadeList"
-import ScrambleText from "../ScrambleText"
-import ResumeCard from "../ResumeCard"
+import BackgroundLines from "../BackgroundLines";
+import ParaWriting from "../ParaWriting";
+import FadeList from "../FadeList";
+import ScrambleText from "../ScrambleText";
+import ResumeCard from "../ResumeCard";
 
 // assets
-import ProfilePic from "../../assets/Images/Profile pic.jpeg"
-import Icon from "../Icon"
-import githubIcon from "../../assets/Icon/github.svg"
-import linkedinIcon from "../../assets/Icon/linkedin.svg"
-import fileIcon from "../../assets/Icon/file.svg"
-import RuaResume from "../../assets/Resume/RESUMEJuly 22.pdf"
+import ProfilePic from "../../assets/Images/Profile pic.jpeg";
+import Icon from "../Icon";
+import githubIcon from "../../assets/Icon/github.svg";
+import linkedinIcon from "../../assets/Icon/linkedin.svg";
+import fileIcon from "../../assets/Icon/file.svg";
+import RuaResume from "../../assets/Resume/RESUME_AUG_11.pdf";
 
 // jsons
-import technicalSkills from "../../constants/technicalSkills.json"
-import technicalSkills2 from "../../constants/technicalSkills2.json"
-import qualities from "../../constants/qualities.json"
-import experienceList from "../../constants/experienceList.json"
+import technicalSkills from "../../constants/technicalSkills.json";
+import technicalSkills2 from "../../constants/technicalSkills2.json";
+import qualities from "../../constants/qualities.json";
+import experienceList from "../../constants/experienceList.json";
 
 export default function Resume() {
-  const controls = useAnimation()
-  const [ref, inView] = useInView()
-  const [hasAnimated, setHasAnimated] = useState(false)
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   const handleComplete = () => {
-    setHasAnimated(true)
-  }
+    setHasAnimated(true);
+  };
 
   useEffect(() => {
     // Start animation when the component is in view
     if (inView && !hasAnimated) {
-      controls.start("visible")
+      controls.start("visible");
     }
-  }, [inView, controls])
+  }, [inView, controls]);
 
   const opacityVariant = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
-  }
+  };
 
   const blurVariants = {
     hidden: { opacity: 0, filter: "blur(10px)" },
     visible: { opacity: 1, filter: "blur(0px)" },
-  }
+  };
 
   return (
     <section ref={ref} className="resume" id="resume">
@@ -69,11 +69,26 @@ export default function Resume() {
                   Software Engineer
                 </ScrambleText>
               </h5>
-              <motion.div initial="hidden" animate={controls} variants={blurVariants} transition={{ duration: 1, delay: 0.5 }} onAnimationComplete={() => handleComplete()} className="resume--grid--detail--data--name--icons">
-                <a href="https://github.com/Rua-E" target="_blank" rel="noreferrer">
+              <motion.div
+                initial="hidden"
+                animate={controls}
+                variants={blurVariants}
+                transition={{ duration: 1, delay: 0.5 }}
+                onAnimationComplete={() => handleComplete()}
+                className="resume--grid--detail--data--name--icons"
+              >
+                <a
+                  href="https://github.com/Rua-E"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Icon img={githubIcon} />
                 </a>
-                <a href="https://www.linkedin.com/in/rua-el-kasheef" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/rua-el-kasheef"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Icon img={linkedinIcon} />
                 </a>
                 <a href={RuaResume} target="_blank" rel="noreferrer">
@@ -89,8 +104,18 @@ export default function Resume() {
                 </ScrambleText>
               </h4>
               <div className="double">
-                <FadeList delay={0} controls={controls} data={technicalSkills} shuffle />
-                <FadeList delay={0} controls={controls} data={technicalSkills2} shuffle />
+                <FadeList
+                  delay={0}
+                  controls={controls}
+                  data={technicalSkills}
+                  shuffle
+                />
+                <FadeList
+                  delay={0}
+                  controls={controls}
+                  data={technicalSkills2}
+                  shuffle
+                />
               </div>
             </div>
 
@@ -101,7 +126,12 @@ export default function Resume() {
                 </ScrambleText>
               </h4>
 
-              <FadeList delay={0} controls={controls} data={qualities} shuffle />
+              <FadeList
+                delay={0}
+                controls={controls}
+                data={qualities}
+                shuffle
+              />
             </div>
           </div>
         </div>
@@ -109,10 +139,20 @@ export default function Resume() {
         <div className="resume--grid--experience">
           <div className="resume--grid--experience--head">
             <p className="theme--detail">
-              <ScrambleText delay={0}>A highly motivated software engineer prepared to utilise exceptional software, problem-solving and communication skills to further my programming passion as a website developer.</ScrambleText>
+              <ScrambleText delay={0}>
+                A highly motivated software engineer prepared to utilise
+                exceptional software, problem-solving and communication skills
+                to further my programming passion as a website developer.
+              </ScrambleText>
             </p>
 
-            <motion.h5 initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 0.5 }} className="theme--text">
+            <motion.h5
+              initial="hidden"
+              animate={controls}
+              variants={opacityVariant}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="theme--text"
+            >
               <ScrambleText shuffle delay={0.5}>
                 05
               </ScrambleText>{" "}
@@ -129,11 +169,18 @@ export default function Resume() {
               </ScrambleText>
             </h4>
             {experienceList.map((item, index) => {
-              return <ResumeCard key={index} experienceList={item} controls={controls} delay={index + 1} />
+              return (
+                <ResumeCard
+                  key={index}
+                  experienceList={item}
+                  controls={controls}
+                  delay={index + 1}
+                />
+              );
             })}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

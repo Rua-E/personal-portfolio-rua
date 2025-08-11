@@ -14,7 +14,7 @@ import TextWriting from '../TextWriting'
 import MenuIcon from "../../assets/Icon/menu.svg"
 import headerVideo from "../../assets/headerVideo.webm"
 import ArrowUpRightIcon from "../../assets/Icon/arrow-up-right.svg"
-import RuaResume from "../../assets/Resume/RESUMEJuly 22.pdf"
+import RuaResume from "../../assets/Resume/RESUME_AUG_11.pdf"
 import File from "../../assets/Icon/file.svg"
 
 
